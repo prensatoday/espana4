@@ -1,76 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muy Pronto</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      color: #fff0000;
-      text-align: center;
-      background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    }
-
-    #countdown {
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    }
-
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 1rem;
-      opacity: 0.7;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominio en Venta</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #a00;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        .email {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+    </style>
 </head>
 <body>
-  <h1>MUY PRONTO SE SABRÁ TODA LA VERDAD</h1>
-  <div id="countdown">00:00:00</div>
-  <footer>&copy; 2025 - Todos los derechos reservados</footer>
-
-  <script>
-    // Configura la fecha final del contador
-    const targetDate = new Date('2025-01-25T00:00:00'); // 
-
-    function updateCountdown() {
-      const now = new Date();
-      const difference = targetDate - now;
-
-      if (difference <= 0) {
-        document.getElementById("countdown").innerText = "¡El momento ha llegado!";
-        clearInterval(interval);
-        return;
-      }
-
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerText =
-        `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    const interval = setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+    <div class="container">
+        <h1>Este dominio está en venta</h1>
+        <p>Si estás interesado en adquirir este dominio y sitio web, contáctanos:</p>
+        <p class="email">mckinseyes@gmail.com</p>
+        <img src="image.png" alt="Dominio en venta">
+    </div>
 </body>
 </html>
